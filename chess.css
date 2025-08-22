@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Body and Background */
+body {
+    background-color: #E0FFFF; ; /* Subtle light gray for a clean, modern look */
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #1f2937; /* Dark gray */
+}
+
+/* Container */
+.container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Product Card */
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.product-link:hover {
+    transform: translateY(-5px);
+}
+
+.product {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    height: 370px; /* Adjusted height for buttons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #e5e7eb;
+    margin: 0 auto;
+}
+
+/* Title and Price */
+.title {
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.price {
+    color: #ef4444;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.product small {
+    color: #10b981;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now {
+    background-color: #1f2937; /* Dark color for primary action */
+    color: #ffffff;
+}
+
+.buy-now:hover {
+    background-color: #374151;
+}
+
+.add-to-cart {
+    background-color: #4ade80; /* Green for add to cart */
+    color: #ffffff;
+}
+
+.add-to-cart:hover {
+    background-color: #22c55e;
+}
+
+.wishlist {
+    background-color: #3b82f6; /* Blue for wishlist */
+    color: #ffffff;
+}
+
+.wishlist:hover {
+    background-color: #2563eb;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}

@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    background-image: url('https://c8.alamy.com/comp/2K4DD3T/shades-of-pink-color-background-illustration-design-2K4DD3T.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Tangerine', cursive; /* Apply the Tangerine font */
+    color: PINK; /* White text color for contrast */
+}
+
+h1, h2, h3 {
+    font-family: 'Tangerine', cursive; /* Apply Tangerine to headings */
+    color: #fff; /* White color for headings */
+}
+
+p {
+    font-family: 'Tangerine', cursive; /* Apply Tangerine to paragraphs */
+    color: #fff; /* White text for paragraphs */
+}
+
+/* Optional: Adding some shadow to make the text stand out more */
+h1, h2, h3, p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.product-item p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.cart {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin: 10px 0;
+}
+
+#total-price {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.remove-item {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.remove-item:hover {
+    background-color: #cc0000;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .order-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .order-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .order-section label {
+            font-size: 1.1em;
+        }
+
+        .order-section input[type="text"],
+        .order-section input[type="number"],
+        .order-section textarea {
+            width: 100%;
+            padding: 15px; /* Increased padding for address input */
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em; /* Increased font size for better readability */
+        }
+
+        .order-section .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Added gap between payment method options */
+        }
+
+        .order-section .payment-methods label {
+            font-size: 1.1em;
+            margin-right: 10px;
+        }
+
+        .order-section .payment-methods input {
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .order-section button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .order-section button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="order-container">
+        <h2>Order Page</h2>
+        
+        <!-- Address Section -->
+        <fieldset>
+            <div class="order-section">
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Enter your address" required>
+            </div>
+        </fieldset>
+
+        <!-- Payment Methods Section -->
+        <fieldset>
+            <div class="order-section">
+                <label for="payment-method">Payment Method:</label>
+                <div class="payment-methods">
+                    <label>
+                        <input type="radio" name="payment" value="phonepay" id="phonepay"> PhonePay
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="gpay" id="gpay"> GPay
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="paytm" id="paytm"> Paytm
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="cashondelivery" id="cashondelivery"> Cash on Delivery
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="netbanking" id="netbanking"> Net Banking
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="debitcreditcard" id="debitcreditcard"> Debit/Credit Card
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Proceed to Pay Button -->
+        <fieldset>
+            <div class="order-section">
+                <button onclick="proceedToPay()">Proceed to Pay</button>
+            </div>
+        </fieldset>
+    </div>
+
+   
+ <script>
+        // Function to handle the "Proceed to Pay" button click
+        function proceedToPay() {
+            const address = document.getElementById('address').value;
+            const paymentMethod = document.querySelector('input[name="payment"]:checked');
+            
+            if (!address || !paymentMethod) {
+                alert('Please fill in your address and select a payment method.');
+                return;
+            }
+
+            const selectedPaymentMethod = paymentMethod.value;
+            alert(Address: ${address}\nPayment Method: ${selectedPaymentMethod}\nProceeding to payment...);
+            // Here, you can redirect to a payment gateway or process the order.
+            // Example: window.location.href = "payment_gateway_url";
+        }
+    </script>
+
+</body>
+</html>

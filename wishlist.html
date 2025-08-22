@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .wishlist-container { width: 80%; margin: 20px auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; }
+        .wishlist-item { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #ddd; }
+        .wishlist-item:last-child { border-bottom: none; }
+        .wishlist-item img { width: 100px; height: auto; margin-right: 20px; }
+        .item-details { flex-grow: 1; }
+        .item-name { font-weight: bold; font-size: 18px; }
+        .item-price { color: green; }
+        .empty-message { text-align: center; color: #777; font-size: 18px; }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">My Wishlist</h1>
+<div class="wishlist-container" id="wishlistContainer">
+    <!-- Wishlist items will be dynamically inserted here -->
+</div>
+
+<script>
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const wishlistContainer = document.getElementById("wishlistContainer");
+
+    if (wishlist.length === 0) {
+        wishlistContainer.innerHTML = '<p class="empty-message">Your wishlist is empty.</p>';
+    } else {
+        wishlist.forEach(item => {
+            const itemElement = document.createElement("div");
+            itemElement.classList.add("wishlist-item");
+            itemElement.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <div class="item-details">
+                    <span class="item-name">${item.name}</span><br>
+                    <span class="item-price">${item.price}</span>
+                </div>
+            `;
+            wishlistContainer.appendChild(itemElement);
+        });
+    }
+</script>
+
+</body>
+</html>

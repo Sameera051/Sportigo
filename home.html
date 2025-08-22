@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .navbar-icons {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .navbar-icons:hover .profile-dropdown-content, .navbar-icons.active .profile-dropdown-content {
+            display: block;
+        }
+
+        .profile-dropdown-content a {
+            padding: 10px;
+            display: flex; /* Use flex to align icons and text */
+            align-items: center; /* Center items vertically */
+            text-decoration: none;
+            color: black;
+        }
+
+        .profile-dropdown-content a:hover {
+            background-color: #f1f1f1; /* Change background on hover */
+        }
+
+        .navbar-links img.logo {
+            width: 30px;
+            height: auto;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .profile-dropdown-content i {
+            margin-right: 8px; /* Space between icon and text */
+        }
+ .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: black;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-links">
+            <a href="#">
+                <img src="C:\Users\Bhavana Lakshmi\OneDrive\Desktop\sports\logo.jpg.png" width=500px; 
+    height: 500px;  alt="Sports Logo" class="logo">
+                Home
+            </a>
+  <div class="dropdown">
+                <a href="#">All Products</a>
+                <div class="dropdown-content">
+                    <!-- Link to the Outdoor page -->
+                    <a href="outdoor.html">Outdoor</a>
+                    <!-- Link to the Indoor page -->
+                    <a href="indoor.html">Indoor</a>
+                </div>
+</div>
+            
+           
+        </div>
+       <nav class="navbar">
+    <div class="navbar-links">
+            <div class="navbar-search">
+        <input type="text" placeholder="Search products..." />
+    </div>
+    <div class="navbar-icons">
+        <span onclick="toggleProfileDropdown()" style="cursor: pointer;">&#128100;</span>
+        <div class="profile-dropdown-content">
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
+            <a href="order.html"><i class="fas fa-box-open"></i>Your Orders</a>
+            <a href="addtocart.html"><i class="fas fa-shopping-cart"></i>Add to Cart</a>
+            <a href="profile.html"><i class="fas fa-user"></i>Profile</a>
+            <a href="logout.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+        </div>
+    </div>
+</nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Shopping! Welcome to our page</h1>
+        <p>Here are Men’s, Women’s, Clothes and Shoes Collection, where you can buy Shoes and clothes with great prices</p>
+        <div class="hero-buttons">
+                    <a href="cricket.html" target="_blank">Cricket</a>
+                    <a href="volleyball.html" target="_blank">Volleyball</a>
+                    <a href="basketball.html" target="_blank">BASKETBALL</a>
+                    <a href="football.html" target="_blank">Football</a>
+                    <a href="badminton.html" target="_blank">Badminton</a>
+                    <a href="hockey.html" target="_blank">Hockey</a>
+            <BR>
+            <BR>
+            <BR>
+          
+                    <a href="volleyball.html" target="_blank">CARROMS</a>
+                    <a href="chess.html" target="_blank">chess</a>
+                    <a href="snooker.html" target="_blank">snooker</a>
+                    <a href="badminton.html" target="_blank">tabletennis</a>
+                    <a href="hockey.html" target="_blank">cards</a>
+           
+        </div>
+    </section>
+
+    <!-- Product Display Section -->
+    <section class="products">
+        <h2>TOP PICKS FOR YOU</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="https://www.jiomart.com/images/product/original/rvrgwpjvsp/bruton-trendy-sports-shoes-for-men-blue-product-images-rvrgwpjvsp-0-202209021256.jpg?im=Resize=(500,630)" alt="Essentials Down Jacket">
+                 <p>SOFTKNIT LOAFERS</p>
+                 <p>Victory Blue | MEN</p>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/71BpHyO2pbL.AC_UY1100.jpg" alt="Softknit Loafers">
+                <p>sportswear</p>
+<P>BLACK| WOMEN
+            </div>
+<div class="product-item">
+                <img src="C:\Users\Bhavana Lakshmi\OneDrive\Desktop\sports\snooker.jpg.png" alt="Softknit Loafers">
+                <p>JBB Snooker Table Balls Set</p>
+<p>22 BALLS</p>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/31eU5ZjhGBL.AC_UY1100.jpg" alt="Adicolor Classics Track Pants">
+                <p>ADICOLOR CLASSICS TRACK PANTS</p>
+                <p>Black |Women</p>
+            </div>
+            <div class="product-item">
+                <img src="https://content.jdmagicbox.com/rep/b2b/field-hockey-sticks/field-hockey-sticks-1.jpg?impolicy=queryparam&im=Resize=(360,360),aspect=fit" alt="Essentials Core Polo Tee">
+                <p>ESSENTIALS CORE POLO TEE</p>
+                <p>Bold Aqua | MEN</p>
+            
+</div>
+<div class="product-item">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.SFICivPf-v4YqBDipHyiQwHaHa&pid=Api&P=0&h=180" alt="Softknit Loafers">
+                <p>VOLLEY BALL</p>
+<P>MIKASA</P>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleProfileDropdown() {
+            const dropdown = document.querySelector(".profile-dropdown-content");
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.navbar-icons span')) {
+                const dropdowns = document.getElementsByClassName("profile-dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+</html>

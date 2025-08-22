@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Example</title>
+    <style>
+        /* Style for dropdown menus */
+        .dropdown {
+            position: relative;
+            display: block;
+            margin: 20px 0; /* Space between dropdowns */
+        }
+
+        .dropdown button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+        <button>Outdoor</button>
+        <div class="dropdown-content">
+            <a href="cricket.html" target="_blank">Cricket</a>
+            <a href="volleyball.html" target="_blank">Volleyball</a>
+            <a href="soccer.html" target="_blank">Soccer</a>
+            <a href="football.html" target="_blank">Football</a>
+            <a href="badminton.html" target="_blank">Badminton</a>
+            <a href="hockey.html" target="_blank">Hockey</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button>Indoor</button>
+        <div class="dropdown-content">
+            <a href="carroms.html" target="_blank">Carroms</a>
+            <a href="chess.html" target="_blank">Chess</a>
+            <a href="playing_cards.html" target="_blank">Playing Cards</a>
+            <a href="tabletennis.html" target="_blank">Table Tennis</a>
+        </div>
+    </div>
+
+</body>
+</html>
